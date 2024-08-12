@@ -70,23 +70,18 @@
 		<library name="songs"         preload="true" />
 		<library name="shared"        preload="false" />
 	</section>
-
-	<assets path="assets/videos"        library="videos"        if="VIDEOS_ALLOWED"/>
-        <assets path="assets/songs"         library="songs"         exclude="*.ogg" if="web"/>
+	
+        <assets path="assets/videos"        library="videos"        if="VIDEOS_ALLOWED"/>
+	<assets path="assets/songs"         library="songs"         exclude="*.ogg" if="web"/>
 	<assets path="assets/songs"         library="songs"         exclude="*.mp3" unless="web"/>
 	<assets path="assets/shared"        library="shared"        exclude="*.ogg" if="web"/>
-	<assets path="assets/shared"        library="shared"        exclude="*.mp3" unless="web"/>
-
+	
 	<section if="MODS_ALLOWED">
 		<assets path='example_mods' rename='mods' embed='false' library="mods"/>
 	</section>
 
 	<assets path="assets/fonts" embed='true'/>
-
-	<assets path="assets/tools/win" rename="assets/tools/" if="windows"/>
-	<assets path="assets/tools/mac" rename="assets/tools/" if="mac"/>
-	<assets path="assets/tools/linux" rename="assets/tools/" if="linux"/>
-
+		
 	<!-- _______________________________ Libraries ______________________________ -->
 
 	<haxelib name="flixel" />
