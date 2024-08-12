@@ -15,6 +15,7 @@ import openfl.display.Sprite;
 import openfl.events.Event;
 import openfl.display.StageScaleMode;
 import lime.app.Application;
+import mobile.CopyState;
 
 //crash handler stuff
 #if CRASH_HANDLER
@@ -51,6 +52,20 @@ class Main extends Sprite
 
 	public function new()
 	{
+	    if mobile
+	    if android
+		SUtil.doPermissionsShit();
+		if (!FileSystem.exists(SUtil.getStorageDirectory()))
+			FileSystem.createDirectory(SUtil.getStorageDirectory());
+		#end
+		Sys.setCwd(SUtil.getStorageDirectory());
+		#end
+		
+		if android
+		if (!FileSystem.exists(SUtil.getStorageDirectory()))
+			FileSystem.createDirectory(SUtil.getStorageDirectory());
+	         #end
+		    
 		super();
 
 		if (stage != null)
@@ -87,10 +102,10 @@ class Main extends Sprite
 			gameWidth = Math.ceil(stageWidth / zoom);
 			gameHeight = Math.ceil(stageHeight / zoom);
 		}
-	
-		ClientPrefs.loadDefaultKeys();
-		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
-
+		
+	        ClientPrefs.loadDefaultKeys();
+		addChild(new FlxGame(game.width, game.height, #if (mobile && MODS_ALLOWED) !CopyState.checkExistingFiles() ? CopyState : #end game.initialState, game.zoom, game.framerate, game.framerate, game.skipSplash, game.startFullscreen));
+		
 		#if !mobile
 		fpsVar = new FPS(10, 3, 0xFFFFFF);
 		addChild(fpsVar);
@@ -148,12 +163,13 @@ class Main extends Sprite
 
 		Sys.println(errMsg);
 		Sys.println("Crash dump saved in " + Path.normalize(path));
-
-		Application.current.window.alert(errMsg, "Error!");
-		#if desktop
+		
+    #if mobile
+        SUtil.showPopUp("Error!", errMsg);
+        #end
+    #if desktop
 		DiscordClient.shutdown();
-		#end
-		Sys.exit(1);
+	 #end
 	}
 	#end
 }
