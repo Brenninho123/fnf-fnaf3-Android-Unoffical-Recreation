@@ -3,14 +3,32 @@
     {
       "name": "discord_rpc",
       "type": "git",
-      "dir": null,
-      "ref": "2d83fa8",
+      "ref": "master",
       "url": "https://github.com/Aidan63/linc_discord-rpc"
     },
     {
+      "name": "linc_luajit",
+      "type": "git",
+      "ref": "main",
+      "url": "https://github.com/mcagabe19-stuff/linc_luajit-legacy"
+    },
+    {
+      "name": "extension-androidtools",
+      "type": "git",
+      "ref": "main",
+      "url": "https://github.com/MAJigsaw77/extension-androidtools"
+    },
+    {
       "name": "flixel",
-      "type": "haxelib",
-      "version": "4.11.0"
+      "type": "git",
+      "ref": "main",
+      "url": "https://github.com/Prohack101010/flixel-0.6.3_ex"
+    },
+    {
+      "name": "flxanimate",
+      "type": "git",
+      "ref": "dev",
+      "url": "https://github.com/ShadowMario/flxanimate"
     },
     {
       "name": "flixel-addons",
@@ -18,72 +36,38 @@
       "version": "2.11.0"
     },
     {
-      "name": "flixel-tools",
-      "type": "haxelib",
-      "version": "1.5.1"
-    },
-    {
       "name": "flixel-ui",
       "type": "haxelib",
-      "version": "2.5.0"
+      "version": "2.4.0"
     },
     {
       "name": "hscript",
       "type": "haxelib",
-      "version": "2.5.0"
+      "version": "2.4.0"
     },
     {
-      "name": "hscript-ex",
+      "name": "hxCodec",
       "type": "git",
-      "dir": null,
-      "ref": "6d5e4fa",
-      "url": "https://github.com/ianharrigan/hscript-ex"
-    },
-    {
-      "name": "hxvlc",
-      "type": "git",
-      "dir": null,
       "ref": "main",
-      "url": "https://github.com/MAJigsaw77/hxvlc"
+      "url": "https://github.com/MobilePorting/hxCodec-0.6.3"
     },
     {
       "name": "hxcpp",
       "type": "git",
-      "dir": null,
-      "ref": "c3e5ab8",
-      "url": "https://github.com/HaxeFoundation/hxcpp"
-    },
-    {
-      "name": "hxcpp-debug-server",
-      "type": "haxelib",
-      "version": "1.2.4"
-    },
-    {
-      "name": "hxjsonast",
-      "type": "haxelib",
-      "version": "1.1.0"
+      "ref": "master",
+      "url": "https://github.com/mcagabe19-stuff/hxcpp"
     },
     {
       "name": "lime",
-      "type": "haxelib",
-      "version": "8.1.1"
-    },
-    {
-      "name": "linc_luajit",
       "type": "git",
-      "dir": null,
-      "ref": "bcb4254",
-      "url": "https://github.com/nebulazorua/linc_luajit"
+      "ref": "develop",
+      "url": "https://github.com/mcagabe19-stuff/lime"
     },
     {
       "name": "openfl",
-      "type": "haxelib",
-      "version": "9.3.2"
-    },
-    {
-      "name": "tjson",
-      "type": "haxelib",
-      "version": "1.4.0"
+      "type": "git",
+      "ref": "develop",
+      "url": "https://github.com/Prohack101010/openfl-0.6.3"
     }
   ]
 }
