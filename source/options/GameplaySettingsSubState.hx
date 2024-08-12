@@ -39,6 +39,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			'controllerMode',
 			'bool',
 			false);
+			#if mobile true #else false #end);
 		addOption(option);
 
 		//I'd suggest using "Downscroll" as an example for making your own option since it is the simplest here
